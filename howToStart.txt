@@ -12,3 +12,17 @@ npm install
 # NODE_ENV=development
 # Запуск приложения
 npm run start
+PORT=5000
+DB_URL=mongodb://localhost:27017/diplomProjectManager
+JWT_SECRET=qeqoqeq12
+JWT_LIFETIME=1d
+NODE_ENV=development
+
+build command:
+npm install && npm run build-client
+start command:
+npm run start
+
+MongoDBCluster
+artemmine0000  WreZNLmkO9NTiVM2
+mongodb+srv://artemmine0000:WreZNLmkO9NTiVM2@cluster0.onwzwrj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
