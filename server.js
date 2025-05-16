@@ -26,9 +26,9 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 // routes
-app.use('https://diplomkanban.onrender.com/api/v1/auth', authRouter);
-app.use('https://diplomkanban.onrender.com/api/v1/boards', boardRouter);
-app.use('https://diplomkanban.onrender.com/api/v1/tasks', taskRouter);
+app.use('/api/v1/auth', authRouter);
+app.use('/api/v1/boards', boardRouter);
+app.use('/api/v1/tasks', taskRouter);
 
 // catch errors
 app.use(notFoundMiddleware);
