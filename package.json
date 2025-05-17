@@ -12,20 +12,19 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon server --ignore client",
     "client": "npm start --prefix client",
-    "build-client": "npm install --prefix client && npm run build --prefix client",
-    "start": "node server.js"
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bartek-dec/kanban-task-manager-mern.git"
+    "url": "git+https://github.com/"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bartek-dec/kanban-task-manager-mern/issues"
+    "url": "https://github.com/"
   },
-  "homepage": "https://github.com/bartek-dec/kanban-task-manager-mern#readme",
+  "homepage": "https://github.com/",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "dotenv": "^16.0.3",

@@ -101,7 +101,7 @@ const Register = () => {
                     <Logo/>
                 </div>
 
-                <h2 className='header'>{values.isMember ? 'Login' : 'Register'}</h2>
+                <h2 className='header'>{values.isMember ? 'Войти' : 'Зарегестрироваться'}</h2>
 
                 {alertText && <Alert text={alertText}/>}
 

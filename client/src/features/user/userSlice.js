@@ -15,7 +15,7 @@ const initialState = {
 
 export const registerUser = createAsyncThunk('registerUser', async (currentUser, thunkAPI) => {
     try {
-        const {data} = await axios.post('https://diplomkanban.onrender.com/api/v1/auth/register', currentUser);
+        const {data} = await axios.post('/api/v1/auth/register', currentUser);
         return data;
     } catch (error) {
         return thunkAPI.rejectWithValue(error.response.data.msg);
@@ -24,7 +24,7 @@ export const registerUser = createAsyncThunk('registerUser', async (currentUser,
 
 export const loginUser = createAsyncThunk('loginUser', async (currentUser, thunkAPI) => {
     try {
-        const {data} = await axios.post('https://diplomkanban.onrender.com/api/v1/auth/login', currentUser);
+        const {data} = await axios.post('/api/v1/auth/login', currentUser);
         return data;
     } catch (error) {
         return thunkAPI.rejectWithValue(error.response.data.msg);

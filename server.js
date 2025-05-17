@@ -6,10 +6,7 @@ import morgan from 'morgan';
 import helmet from "helmet";
 import xss from 'xss-clean';
 import mongoSanitize from "express-mongo-sanitize";
-import path from 'path';
-import { fileURLToPath } from 'url';
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+
 // middleware
 import notFoundMiddleware from "./middleware/notFound.js";
 import errorHandlerMiddleware from "./middleware/errorHandler.js";
@@ -24,12 +21,10 @@ app.use(helmet());
 app.use(xss());
 app.use(mongoSanitize());
 
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.resolve(__dirname, './client/build')));
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './client/build', 'index.html'));
-  });
+if (process.env.NODE_ENV !== 'production') {
+    app.use(morgan('dev'));
 }
+
 // routes
 app.use('/api/v1/auth', authRouter);
 app.use('/api/v1/boards', boardRouter);
@@ -51,8 +46,5 @@ const start = async () => {
         console.log(error);
     }
 }
-app.get('/', (req, res) => {
-  res.send('API is working');
-});
 
 start();

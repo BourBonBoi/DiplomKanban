@@ -26,3 +26,7 @@ npm run start
 MongoDBCluster
 artemmine0000  WreZNLmkO9NTiVM2
 mongodb+srv://artemmine0000:WreZNLmkO9NTiVM2@cluster0.onwzwrj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
+
+
+mongodb+srv://artemmine0000:WreZNLmkO9NTiVM2@cluster0.onwzwrj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0

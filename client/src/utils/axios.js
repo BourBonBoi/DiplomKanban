@@ -4,7 +4,7 @@ import {setToken, setUser} from "../features/user/userSlice";
 import {setActiveBoard, setIsEditing} from "../features/board/boardSlice";
 
 export const authFetch = axios.create({
-    baseURL: 'https://diplomkanban.onrender.com/api/v1',
+    baseURL: '/api/v1',
 });
 
 authFetch.interceptors.request.use((config) => {
