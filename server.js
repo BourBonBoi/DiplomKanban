@@ -7,7 +7,6 @@ import helmet from "helmet";
 import xss from 'xss-clean';
 import mongoSanitize from "express-mongo-sanitize";
 import cors from 'cors'
-
 // middleware
 import notFoundMiddleware from "./middleware/notFound.js";
 import errorHandlerMiddleware from "./middleware/errorHandler.js";
@@ -27,7 +26,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 app.use(cors({
-  origin: 'https://statuesque-douhua-332a7d.netlify.app/',
+  origin: 'https://diplomkanban.onrender.com/',
   credentials: true
 }));
 
