@@ -6,6 +6,7 @@ import morgan from 'morgan';
 import helmet from "helmet";
 import xss from 'xss-clean';
 import mongoSanitize from "express-mongo-sanitize";
+import cors from 'cors'
 
 // middleware
 import notFoundMiddleware from "./middleware/notFound.js";
