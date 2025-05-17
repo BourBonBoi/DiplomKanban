@@ -25,6 +25,11 @@ if (process.env.NODE_ENV !== 'production') {
     app.use(morgan('dev'));
 }
 
+app.use(cors({
+  origin: 'https://statuesque-douhua-332a7d.netlify.app/',
+  credentials: true
+}));
+
 // routes
 app.use('/api/v1/auth', authRouter);
 app.use('/api/v1/boards', boardRouter);
